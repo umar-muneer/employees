@@ -1,0 +1,24 @@
+{
+  "name": "employees",
+  "version": "1.0.0",
+  "description": "Sample Employees API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umar-muneer/employees.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umar-muneer/employees/issues"
+  },
+  "homepage": "https://github.com/umar-muneer/employees#readme",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "express": "^4.17.1",
+    "express-bunyan-logger": "^1.3.3"
+  }
+}
