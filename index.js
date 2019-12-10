@@ -31,7 +31,8 @@ app.get("/employees", (req, res) => {
 });
 
 app.get("/employees/:id", (req, res) => {
-    const employee = employees.find(employee => employee.id === req.params.id);
+    const employee = employees.find(employee => employee.id == req.params.id);
+    console.log(employee, "###", req.params.id);
     res.json(employee);
 });
 const port = process.env.PORT || 3001;
