@@ -17,6 +17,13 @@ const employees = [{
 }];
 
 app.use(expressBunyan());
+
+app.get("/", (req, res) => {
+    res.json("OK");
+});
+app.get("/health", (req, res) => {
+    res.json("OK");
+})
 app.get("/employees", (req, res) => {
     const pageLimit = req.query.pageLimit;
     const bodyLimit = req.query.bodyLimit;
@@ -24,7 +31,7 @@ app.get("/employees", (req, res) => {
 });
 
 app.get("/employees/:id", (req, res) => {
-    const employee = employees.find(employee => employee.id === req.param.id);
+    const employee = employees.find(employee => employee.id === req.params.id);
     res.json(employee);
 });
 const port = process.env.PORT || 3001;
